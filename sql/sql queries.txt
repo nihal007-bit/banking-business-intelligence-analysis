@@ -1,0 +1,96 @@
+
+ SQL QUERIES :
+
+
+-- 1. Display all customer names and ages
+SELECT "Name", Age
+FROM customer;
+
+-- 2. Count the total number of customers
+SELECT COUNT(*) AS Total_Customers
+FROM customer;
+
+-- 3. Display customers with more than 3 credit cards
+SELECT "Name", "Amount of Credit Cards"
+FROM customer
+WHERE "Amount of Credit Cards" > 3;
+
+-- 4. Display customers whose age is between 30 and 50
+SELECT "Name", Age
+FROM customer
+WHERE Age BETWEEN 30 AND 50;
+
+-- 5. Display customer names and occupations
+SELECT "Name", Occupation
+FROM customer;
+
+
+
+-- 6. Top 10 customers with the highest bank deposits
+SELECT "Name", "Bank Deposits"
+FROM customer
+ORDER BY "Bank Deposits" DESC
+LIMIT 10;
+
+-- 7. Find the average estimated income for each occupation
+SELECT Occupation,
+       AVG("Estimated Income") AS Average_Income
+FROM customer
+GROUP BY Occupation
+ORDER BY Average_Income DESC;
+
+-- 8. Count customers based on nationality
+SELECT Nationality,
+       COUNT(*) AS Total_Customers
+FROM customer
+GROUP BY Nationality
+ORDER BY Total_Customers DESC;
+
+-- 9. Find customers whose bank loans exceed 500000
+SELECT "Name", "Bank Loans"
+FROM customer
+WHERE "Bank Loans" > 500000;
+
+-- 10. Calculate the average credit card balance
+SELECT AVG("Credit Card Balance") AS Average_Credit_Card_Balance
+FROM customer;
+
+-- 11. Find the maximum and minimum estimated income
+SELECT
+MAX("Estimated Income") AS Highest_Income,
+MIN("Estimated Income") AS Lowest_Income
+FROM customer;
+
+-- 12. Find the average bank deposits by nationality
+SELECT Nationality,
+AVG("Bank Deposits") AS Average_Deposits
+FROM customer
+GROUP BY Nationality
+ORDER BY Average_Deposits DESC;
+
+-- 13. Count customers by occupation
+SELECT Occupation,
+COUNT(*) AS Total_Customers
+FROM customer
+GROUP BY Occupation
+ORDER BY Total_Customers DESC;
+
+
+
+
+-- 14. Display customers whose estimated income is above the average income
+SELECT "Name", "Estimated Income"
+FROM customer
+WHERE "Estimated Income" >
+(
+    SELECT AVG("Estimated Income")
+    FROM customer
+);
+
+-- 15. Find the Top 5 customers with the highest total assets
+SELECT
+    "Name",
+    ("Bank Deposits" + "Saving Accounts" + "Checking Accounts") AS Total_Assets
+FROM customer
+ORDER BY Total_Assets DESC
+LIMIT 5;
