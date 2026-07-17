@@ -33,38 +33,7 @@ This project covers the complete analytics workflow—from data preprocessing an
 
 ---
 
-##  Project Structure
 
-```
-banking-business-intelligence-analysis/
-│
-├── data/
-│   ├── Banking.csv
-│   ├── banking_relationships.csv
-│   ├── gender.csv
-│   └── investment_advisors.csv
-│
-├── notebooks/
-│   └── EDA_Banking.ipynb
-│
-├── sql/
-│   ├── analysis_queries.sql
-│   └── postgresql_query_demo.png
-│
-├── powerbi/
-│   └── banking_dashboard.pbix
-│
-├── dashboard_images/
-│   ├── overview_dashboard.png
-│   ├── customer_analysis.png
-│   ├── loan_analysis.png
-│   └── deposit_analysis.png
-│
-├── README.md
-└── requirements.txt
-```
-
----
 
 ##  Project Workflow
 
