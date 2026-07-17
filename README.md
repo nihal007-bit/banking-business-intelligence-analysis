@@ -1,5 +1,9 @@
 
 #  Banking Business Intelligence Analysis
+## Dashboard home page
+<img width="1182" height="672" alt="home" src="https://github.com/user-attachments/assets/b5beb480-6abb-47f1-a417-32866e3e3021" />
+
+
 
 An end-to-end **Business Intelligence and Data Analytics** project in the banking domain that transforms raw banking data into actionable business insights using **Python**, **PostgreSQL**, **SQL**, and **Power BI**.
 
